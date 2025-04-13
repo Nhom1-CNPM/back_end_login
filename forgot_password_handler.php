@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->setFrom('tranthientrieu2004@gmail.com', 'YourAppName');
             $mail->addAddress($email);
             $mail->Subject = 'RESET PASSWORD REQUEST!';
-            $reset_link = "http://localhost/myproject_php/templates/reset_password.php?uid=$uid&token=$token";
+            $reset_link = "http://localhost:3000/reset-password?uid=$uid&token=$token";
             $mail->Body = "Nhấn vào đây để đặt lại mật khẩu: $reset_link";
 
             $mail->send();
